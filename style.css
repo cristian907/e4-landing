@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* background */
+    --bg-primary: #0d0f0f;
+    --bg-secondary: #1d1d1d;
+    --bg-tertiary: #363535;
+    --bg-header: #030303;
+
+
+    /* text */
+    --text-primary: #8e8e8e;
+    --text-secondary: #e7e7e7;
+
+    /* accent */
+    --accent: #460068;
+    --accent-contrast: #ede2ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Header */
+
+header {
+    background: var(--bg-header);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.logo {
+    height: 70%;
+    cursor: pointer;
+}
+
+/* navbar */
+
+.navbar,
+.navbarList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    gap: 3em;
+}
+
+.navbarList {
+    gap: 1.5em;
+}
+
+.navbarList a {
+    color: var(--text-primary);
+    transition: all .2s;
+}
+
+.navbarList li:first-child>a {
+    color: var(--text-secondary);
+    font-weight: 700;
+}
+
+.navbarList a:hover {
+    color: var(--text-secondary);
+}
+
+/* Searchbar */
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    background-color: var(--bg-secondary);
+    border-radius: 1rem;
+    height: 2.2rem;
+    width: fit-content;
+    width: 19rem;
+    transition: all .3s;
+}
+
+.search:hover,
+.search:has(.searchBar:focus) {
+    height: 2.5rem;
+    width: 19.5rem;
+    background-color: var(--bg-tertiary);
+}
+
+.searchBar {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+}
+
+.searchGlass {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+}
+
+.searchGlass img {
+    height: 60%;
+    transition: all .3s;
+}
+
+.searchGlass img:hover {
+    height: 70%;
+}
+
+.cart {
+    height: 1.9rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.cart:hover {
+    height: 2.3rem;
+}
+
+/* main */
+
+main {
+    margin-top: 5rem;
+    width: 100%;
+    background-color: var(--bg-primary);
+}
+
+/* hero */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border-radius: 1rem;
+}
+
+.hero img {
+    width: 50%;
+}
+
+.heroInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 3rem;
+}
+
+.heroText {
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 18rem;
+}
+
+.heroText h2 {
+    font-size: 2.2em;
+    font-weight: 800;
+}
+
+.heroInfo a {
+    color: var(--text-secondary);
+    background-color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2.7rem;
+    border-radius: .8rem;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all .1s;
+}
+
+.heroInfo a:hover {
+    background-color: var(--accent-contrast);
+    color: var(--accent);
+    border: 3px solid var(--accent);
+}
+
+/* about */
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-primary);
+    padding: 1.5rem 0;
+    max-width: 40%;
+    gap: 1.5rem;
+}
+
+.aboutText h1 {
+    font-size: 2.5em;
+}
+
+
+
+/* contact */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    /* margin-top: 3rem; */
+    padding: 3rem 0;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    gap: 2rem;
+}
+
+.contactText {
+    display: flex;
+    flex-direction: column;
+    align-self: self-start;
+    gap: 1rem;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    width: 90%;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+.supportCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.supportCard p {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.supportCard span {
+    color: var(--text-secondary);
+    font-weight: 600;
+    background-color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border-radius: .5rem;
+    width: 80%;
+    font-size: 1.2em;
+}
+
+
+
+
+/* footer */
+
+footer {
+    background-color: var(--bg-header);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1.2rem;
+}
+
+footer img {
+    height: 3rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.social img {
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+footer span {
+    color: var(--text-primary);
+    font-size: .8em;
+}
