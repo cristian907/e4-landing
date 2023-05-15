@@ -221,7 +221,11 @@ main {
 }
 
 .aboutText h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
+}
+
+.aboutText p {
+    font-size: 1rem;
 }
 
 
@@ -233,7 +237,6 @@ main {
     justify-content: center;
     align-items: center;
     color: var(--text-primary);
-    /* margin-top: 3rem; */
     padding: 3rem 0;
 }
 
@@ -293,9 +296,6 @@ main {
     font-size: 1.2em;
 }
 
-
-
-
 /* footer */
 
 footer {
@@ -315,7 +315,7 @@ footer img {
 .social {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .social img {
