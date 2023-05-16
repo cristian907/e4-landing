@@ -48,6 +48,22 @@ header {
 
 /* navbar */
 
+.menuLabel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    cursor: pointer;
+}
+
+.menuLabel img {
+    height: 2rem;
+}
+
+#menuToggle {
+    display: none;
+}
+
 .navbar,
 .navbarList {
     display: flex;
@@ -130,6 +146,10 @@ header {
 
 .cart:hover {
     height: 2.3rem;
+}
+
+#cartToggle {
+    display: none;
 }
 
 /* main */
@@ -228,7 +248,58 @@ main {
     font-size: 1rem;
 }
 
+/* card */
 
+#cards {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    gap: 3rem;
+    padding: 5rem;
+}
+
+#cards h2 {
+    font-size: 2.5em;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    min-width: 15rem;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    /* box-shadow: 10px 10px 10px var(--bg-tertiary); */
+}
+
+.card img {
+    width: 80%;
+}
+
+.performance img {
+    width: 50%;
+    padding: .2rem 0;
+}
+
+.features img {
+    width: 50%;
+    padding: .8rem 0;
+}
 
 /* contact */
 
@@ -326,4 +397,131 @@ footer img {
 footer span {
     color: var(--text-primary);
     font-size: .8em;
+}
+
+@media (max-width: 992px) {
+
+    .navbarList {
+        position: fixed;
+        flex-direction: column;
+        top: 5rem;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-tertiary);
+        padding: 2rem 0;
+        display: none;
+        font-size: 1.2em;
+    }
+
+    #menuToggle:checked+.navbarList {
+        display: flex;
+    }
+
+    /* hero */
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 80%;
+    }
+
+    .heroInfo {
+        align-items: center;
+        padding: 0;
+    }
+
+    /* about */
+
+    .aboutText {
+        width: 80%;
+        max-width: 80%;
+    }
+
+    /* cards */
+
+    #cards {
+        padding: 2rem;
+    }
+
+    .cardContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card {
+        flex-direction: row;
+        width: 100%;
+        height: 15rem;
+    }
+
+    .performance img,
+    .build img,
+    .features img {
+        width: 30%;
+    }
+
+    /* contact */
+
+    .contact {
+        width: 90%;
+    }
+
+    .contactText {
+        justify-content: center;
+        align-items: center;
+        align-self: auto
+    }
+
+    .contactInfo {
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .support {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .supportCard {
+        align-items: center;
+    }
+
+    .supportCard span {
+        width: 120%;
+    }
+
+    .map {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .search {
+        display: none;
+    }
+
+    /* hero */
+
+    .hero {
+        width: 90%;
+    }
+
+    /* card */
+
+    #cards {
+        text-align: center;
+    }
+
+    .card {
+        flex-direction: column;
+        height: auto;
+    }
+
 }

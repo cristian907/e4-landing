@@ -12,6 +12,10 @@
     <header>
         <img src="./assets/img/logo-emudroid.png" alt="logo" class="logo">
         <nav class="navbar">
+            <label for="menuToggle" class="menuLabel">
+                <img src="./assets/img/menu.png" alt="menu">
+            </label>
+            <input type="checkbox" id="menuToggle">
             <ul class="navbarList">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
@@ -25,7 +29,10 @@
                     <img src="./assets/img/search.png" alt="search">
                 </button>
             </div>
-            <img src="./assets/img/cart.png" alt="cart" class="cart">
+            <label for="cartToggle" class="cart">
+                <img src="./assets/img/cart.png" alt="cart" class="cart">
+            </label>
+            <input type="checkbox" id="cartToggle">
         </nav>
     </header>
 
@@ -53,6 +60,24 @@
 
         <section id="cards">
             <h2>Why Emudroid?</h2>
+
+            <div class="cardContainer">
+                <div class="card performance">
+                    <img src="./assets/img/snapdragon.png" alt="performance">
+                    <h3>Performance</h3>
+                    <p>Thanks to the latest 8 series Qualcomm® Snapdragon™ mobile processors, all Emudroid devices have plenty of power to run even the most demanding mobile and retro emulated games at full speed.</p>
+                </div>
+                <div class="card build">
+                    <img src="./assets/img/case.png" alt="build">
+                    <h3>Build Quality</h3>
+                    <p>Here at Emudroid we make sure that customers always get the highest quality products they deserve, that's why we only use top quality plastics, electronics, and metals for high durability and premium feel.</p>
+                </div>
+                <div class="card features">
+                    <img src="./assets/img/android.png" alt="features">
+                    <h3>Features</h3>
+                    <p>All Emudroid devices come standard with Android 12 OS to maximize ease of use, and are compatible with all mobile emulators, making them capable of running both classic and modern games.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
