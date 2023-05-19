@@ -54,6 +54,7 @@ header {
     align-items: center;
     order: 2;
     cursor: pointer;
+    display: none;
 }
 
 .menuLabel img {
@@ -412,6 +413,10 @@ footer span {
         padding: 2rem 0;
         display: none;
         font-size: 1.2em;
+    }
+
+    .menuLabel {
+        display: flex;
     }
 
     #menuToggle:checked+.navbarList {
